@@ -1,3 +1,4 @@
+import { useState } from "react"
 import MovieCard from "../components/movie_card"
 
 function Home() {
@@ -9,7 +10,12 @@ function Home() {
         {id:4, title: "DHurendar", release_date: "2024"},
     ]
 
-    const handleSearch = () => {}
+    const [SearchQuery, SetSearchQuery] = useState("")
+
+    const handleSearch = (e) => {
+        
+        e.preventDefault()
+        alert(SearchQuery)}
 
     return(
         <>
@@ -17,12 +23,14 @@ function Home() {
         <div className="home">
             
             <form onSubmit={handleSearch} className="search-form">
-                <input type="text" placeholder="serch for movies..." className="search-input"/>
-                <button type="submit" className="search-button"> </button>
+                <input type="text" placeholder="serch for movies..." className="search-input" value={SearchQuery} onChange={(e) => {SetSearchQuery(e.target.value)}}/>
+                <button type="submit" className="search-button"> Search </button>
             </form>
 
             <div className="movie-grid">
-                {movies.map( (movie) => <MovieCard movie={movie} Key={movie.id} />)}
+
+                {/* conditional rendering */}
+                {movies.map( (movie) => movie.title.toLowerCase().startsWith(SearchQuery) && <MovieCard movie={movie} Key={movie.id} />)}
             </div>
 
         </div>

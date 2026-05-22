@@ -1,14 +1,14 @@
-import "../../css/Favorites.css"
+import "../../css/Favorites.css";
 
 function Favourites() {
-    return (
-        <>
-        <div className="favourites-empty">
-            <h2> NO fav movies yet</h2>
-            <p> Add it fast</p>
-        </div>   
-        </>
-    )
+  return (
+    <>
+      <div className="favourites-empty">
+        <h2> NO fav movies yet</h2>
+        <p> Add it fast</p>
+      </div>
+    </>
+  );
 }
 
-export default Favourites  
+export default Favourites;

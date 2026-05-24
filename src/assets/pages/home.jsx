@@ -35,6 +35,18 @@ function Home() {
 
         <>
 
+        <header className="h_header">
+            <div>
+                <i> My Home </i>
+            </div>
+
+            <div>
+                <i> favourite </i>
+                <i> Home page </i>
+            </div>
+
+        </header>
+
         <div className="box">
 
             {err && <div> {err} </div>}

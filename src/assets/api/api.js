@@ -10,7 +10,21 @@ export const getmovie = async () => {
     }
 
     catch(err){
-        console.error("You are blocked dawg", err)
+        console.error("Error in geting movies -> ", err)
         return []
+    }
+}
+
+export const searchmovie = async (query) => {
+
+    try{
+        const response = await fetch(`${url}/search/movie?api_key=${apikey}&query=${encodeURIComponent(query)}`)
+        const data = await response.json()
+        return data.results
+    }
+
+    catch(err){
+        console.error("Error in move searching -> ", err)
+        return 
     }
 }

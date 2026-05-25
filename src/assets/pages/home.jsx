@@ -42,6 +42,10 @@ function Home() {
             { loading ? (<div> loading... </div>) : (<div className="box"> {movie.map((movie) => (<Moviecard movie={movie} key={movie.id}/>))} </div> )}
         
         </div>
+
+        <footer className="h_footer">
+
+        </footer>
         
         </>
     )

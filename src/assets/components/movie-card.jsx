@@ -16,7 +16,7 @@ function Moviecard({movie}) {
         </div>
 
         <div className="content">
-          <h4> {movie.title} </h4>
+          <h5> {movie.title} </h5>
           <i> {movie.release_date} </i>
         </div>
       

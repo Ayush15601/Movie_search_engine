@@ -1,6 +1,8 @@
 .mc_box {
     transition: 0.3s ease;
     cursor: pointer;
+    background-color: #191919;
+    min-height: 22rem;
 }
 
 .mc_box:hover {
@@ -13,6 +15,9 @@
     width: 17rem;
 }
 
-.content h1 {
-    font-size: 1rem;
+.content {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
 }

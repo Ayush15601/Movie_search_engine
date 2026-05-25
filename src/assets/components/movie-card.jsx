@@ -18,6 +18,7 @@ function Moviecard({movie}) {
         <div className="content">
           <h5> {movie.title} </h5>
           <i> {movie.release_date} </i>
+          <button className="btn "> ♥ </button>
         </div>
       
     </div>

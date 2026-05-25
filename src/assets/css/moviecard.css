@@ -2,12 +2,18 @@
     transition: 0.3s ease;
     cursor: pointer;
     background-color: #191919;
+    max-width: 17rem;
+    width: 100%;
     min-height: 22rem;
 }
 
 .mc_box:hover {
     box-shadow: 0 0 25px 10px black;
     transform: translateY(-10px);
+
+    .btn {
+        display: inline;
+    }
 }
 
 .img img {
@@ -20,4 +26,14 @@
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
+}
+
+.btn {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.2rem;
+    transform: translateX(280px) translateY(-12px);
 }

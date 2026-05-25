@@ -1,3 +1,14 @@
+.f_box2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 8rem;
+    margin-left: 1rem;
+    column-gap: 4rem;
+    row-gap: 4rem;
+}
+
+
 .f_box1 {
     display: flex;
     justify-content: center;

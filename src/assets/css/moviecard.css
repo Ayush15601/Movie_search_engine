@@ -37,3 +37,7 @@
     font-size: 1.2rem;
     transform: translateX(280px) translateY(-12px);
 }
+
+.active {
+    color: red;
+}

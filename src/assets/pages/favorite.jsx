@@ -1,8 +1,23 @@
 import "../css/fav.css"
+import { usemoviecontext } from "../../context/context"
+import Moviecard from "../components/movie-card"
 
 function Favourite () {
 
-    return(
+    const { fav } = usemoviecontext()
+
+    if(fav.length > 0){
+         
+        return(
+
+            <div className="f_box2"> {fav.map((movie) => (<Moviecard movie={movie} key={movie.id}/>))} </div>
+    
+        )
+    }
+
+    else{
+        
+        return(
 
         <>
         
@@ -17,7 +32,7 @@ function Favourite () {
         </div>
         
         </>
-    )
+    )}
 }
 
 export default Favourite

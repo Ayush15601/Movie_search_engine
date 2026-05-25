@@ -1,23 +1,15 @@
 .box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-left: 1.2rem;
-    padding-top: 4rem;
-    column-gap: 8rem;
-    row-gap: 4rem;
-    transition: 0.2s ease;
-}
-
-.h_header {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    height: 5rem;
-    width: 83.5%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-    position: fixed;
-    z-index: 1;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    padding-top: 4rem;
+    column-gap: 4rem;
+    row-gap: 4rem;
+}
+
+.h_loading {
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
 }

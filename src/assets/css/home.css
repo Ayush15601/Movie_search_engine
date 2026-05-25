@@ -1,9 +1,33 @@
+.h_form {
+    padding-top: 8rem;
+}
+
+form input:nth-of-type(1) {
+    height: 2rem;
+    width: 12rem;
+    margin-right: 1rem;
+    padding-left: 0.2rem;
+}
+
+form input:nth-of-type(2) {
+    height: 1rem;
+    width: 4rem;
+    background-color: red;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form input:nth-of-type(2):hover {
+    box-shadow: 0 0 25px 5px red;
+    transform: translateY(-5px);
+}
+
 .box {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 1rem;
-    padding-top: 4rem;
+    padding-top: 2rem;
     column-gap: 4rem;
     row-gap: 4rem;
 }

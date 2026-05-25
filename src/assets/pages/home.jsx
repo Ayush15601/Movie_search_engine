@@ -35,10 +35,14 @@ function Home() {
 
         <>
 
+        <form className="h_form">
+            <input type="text" placeholder="Search movie" />
+            <input type="button" value="Search" />
+        </form>
+
         <div className="box">
 
             {err && <div> {err} </div>}
-       
             { loading ? (<div> loading... </div>) : (<div className="box"> {movie.map((movie) => (<Moviecard movie={movie} key={movie.id}/>))} </div> )}
         
         </div>

@@ -1,40 +1,36 @@
-import { useState, useEffect, useContext, createContext, Children } from "react"
+import { useState, useEffect, useContext, createContext } from "react";
 
-const moviecontext = createContext()
+const Moviecontext = createContext();
 
-export const usemoviecontext = () => useContext(moviecontext)
+export const usemoviecontext = () => useContext(Moviecontext);
 
-export const Movieprovider = ({children}) => {
+export const Movieprovider = ({ children }) => {
+  const [fav, setfav] = useState([]);
 
-    const [fav, setfav] = useState([])
+  useEffect(() => {
+    const getfav = localStorage.getItem("fav");
+    if (getfav) setfav(JSON.parse(getfav));
+  }, []);
 
-    useEffect( () => {
+  useEffect(() => {
+    localStorage.setItem("fav", JSON.stringify(fav));
+  }, [fav]);
 
-        const getfav = localStorage.getItem('fav')
-        if(getfav) setfav(JSON.parse(getfav))
-    }, [])
+  const isfav = (movieid) => {
+    return fav.some((movie) => movie.id === movieid);
+  };
 
-    useEffect( () => {
+  const addfav = (movie) => {
+    return setfav((prev) => [...prev, movie]);
+  };
 
-        localStorage.setItem('fav', JSON.stringify(fav))
-    }, [fav])
+  const remfav = (movieid) => {
+    return setfav((prev) => prev.filter((movie) => movie.id !== movieid));
+  };
 
-    const isfav = (movieid) => {
-        return fav.some( (movie) => (movie.id === movieid))
-    }
+  const value = { fav, isfav, addfav, remfav };
 
-    const addfav = (movie) => {
-        return setfav( (prev) => [...prev, movie])
-    } 
-
-    const remfav = (movieid) => {
-        return setfav( prev => prev.filter( (movie) => (movie.id !== movieid)) )
-    }
-
-    const value = {fav, isfav, addfav, remfav}
-
-    return (
-        <moviecontext.Provider value = {value}>
-            {children}
-        </moviecontext.Provider>
-)}
+  return (
+    <Moviecontext.Provider value={value}>{children}</Moviecontext.Provider>
+  );
+};

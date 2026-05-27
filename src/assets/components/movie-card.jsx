@@ -1,28 +1,22 @@
-import "../css/moviecard.css"
-import { usemoviecontext } from "../../context/context"
-import Favourite from "../pages/favorite"
+import "../css/moviecard.css";
+import { usemoviecontext } from "../../context/context";
 
-function Moviecard({movie}) {
+function Moviecard({ movie }) {
+  const imgurl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
-  const imgurl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+  const { isfav, addfav, remfav } = usemoviecontext();
 
-  const {fav, isfav, addfav, remfav} = usemoviecontext()
-
-  const favv = isfav(movie.id)
+  const favv = isfav(movie.id);
 
   const onclockfav = (e) => {
-    
-    e.preventDefault()
-    if(favv) remfav(movie.id)
-    else addfav(movie)
-  }
+    e.preventDefault();
+    if (favv) remfav(movie.id);
+    else addfav(movie);
+  };
 
-  return(
-
+  return (
     <>
-  
-    <div className="mc_box">
-
+      <div className="mc_box">
         <div className="img">
           <img src={imgurl} alt={movie.title} />
         </div>
@@ -30,13 +24,16 @@ function Moviecard({movie}) {
         <div className="content">
           <h5> {movie.title} </h5>
           <i> {movie.release_date} </i>
-          <button className={ `btn ${favv ? "active" : ""}` } onClick={onclockfav}> ♥ </button>
+          <button
+            className={`btn ${favv ? "active" : ""}`}
+            onClick={onclockfav}
+          >
+            ♥
+          </button>
         </div>
-      
-    </div>
-  
+      </div>
     </>
-  )
+  );
 }
 
-export default Moviecard
+export default Moviecard;

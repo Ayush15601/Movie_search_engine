@@ -32,11 +32,19 @@ form input:nth-of-type(2):hover {
     row-gap: 4rem;
 }
 
+.h_error{
+    margin-top: 1rem;
+}
+
 .h_loading {
     width: 100%;
     margin-top: 4rem;
     text-align: center;
 }
+
+.h_no_movie{
+    margin-top: 1rem;
+}_
 
 .h_footer {
     background-color: #141414;

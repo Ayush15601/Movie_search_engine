@@ -7,16 +7,18 @@ function Favourite() {
 
   if (fav.length > 0) {
     return (
+      
       <div className="f_box2">
-        {fav.map((movie) => (
-          <Moviecard movie={movie} key={movie.id} />
-        ))}
+        {fav.map((movie) => ( <Moviecard movie={movie} key={movie.id} /> ))}
       </div>
     );
+
   } else {
     return (
+    
       <>
         <div className="f_box1">
+          
           <div className="f_box">
             <h2> No Favorite Movies Yet</h2>
             <br />
@@ -24,8 +26,11 @@ function Favourite() {
               Start adding movies to your favorites and they will appear here!
             </p>
           </div>
+        
         </div>
+      
       </>
+
     );
   }
 }

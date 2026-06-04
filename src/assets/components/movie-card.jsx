@@ -15,24 +15,27 @@ function Moviecard({ movie }) {
   };
 
   return (
+    
     <>
+      
       <div className="mc_box">
+        
         <div className="img">
           <img src={imgurl} alt={movie.title} />
         </div>
 
         <div className="content">
+         
           <h5> {movie.title} </h5>
           <i> {movie.release_date} </i>
-          <button
-            className={`btn ${favv ? "active" : ""}`}
-            onClick={onclockfav}
-          >
-            ♥
-          </button>
+          <button className={`btn ${favv ? "active" : ""}`} onClick={onclockfav}> ♥ </button>
+        
         </div>
+      
       </div>
+    
     </>
+    
   );
 }
 

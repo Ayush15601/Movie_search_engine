@@ -30,7 +30,7 @@ export const Movieprovider = ({ children }) => {
 
   const value = { fav, isfav, addfav, remfav };
 
-  return (
+  return (    
     <Moviecontext.Provider value={value}>{children}</Moviecontext.Provider>
   );
 };

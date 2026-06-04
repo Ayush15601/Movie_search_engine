@@ -6,7 +6,9 @@ export const getmovie = async () => {
     const response = await fetch(`${url}/movie/popular?api_key=${apikey}`);
     const data = await response.json();
     return data.results;
-  } catch (err) {
+  } 
+  
+  catch (err) {
     console.error("Error in geting movies -> ", err);
     return [];
   }
@@ -14,12 +16,12 @@ export const getmovie = async () => {
 
 export const searchmovie = async (query) => {
   try {
-    const response = await fetch(
-      `${url}/search/movie?api_key=${apikey}&query=${encodeURIComponent(query)}`,
-    );
+    const response = await fetch(`${url}/search/movie?api_key=${apikey}&query=${encodeURIComponent(query)}`);
     const data = await response.json();
     return data.results;
-  } catch (err) {
+  } 
+  
+  catch (err) {
     console.error("Error in move searching -> ", err);
     return;
   }

@@ -32,6 +32,7 @@ function Home() {
       seterr("Please enter a movie name");
       return;
     }
+
     if (loading) return;
     setloading(true);
     
@@ -39,47 +40,39 @@ function Home() {
       const storesearchmovie = await searchmovie(query);
       setmovie(storesearchmovie);
       seterr(null);
+
     } catch (err) {
       console.error(err)
       seterr("failed to search...");
 
       // But old movies stay on screen.
       setmovie([]);
+
     } finally {
       setloading(false);
     }
   };
 
   return (
+
     <>
+
       <form className="h_form" onSubmit={loadsearchmovie}>
-        <input
-          type="text"
-          placeholder="Search movie"
-          onChange={(e) => setquery(e.target.value)}
-          value={query}
-        />
+        <input type="text" placeholder="Search movie" onChange={(e) => setquery(e.target.value)} value={query} />
         <input type="submit" value="Search" />
       </form>
 
       <div>
         {err && <div className="h_error"> {err} </div>}
-        {loading ? (
-          <div className="h_loading"> loading movies... </div>
-        ) : (
-          <div className="box">
-
-            {/* Never use  {} use () or it will print undefined */}
-            {movie.map((movie) => (
-              <Moviecard movie={movie} key={movie.id} />
-            ))}
-          </div>
-        )}
+        {loading ? (<div className="h_loading"> loading movies... </div>) : (<div className="box"> {/* Never use  {} use () or it will print undefined */} {movie.map((movie) => (<Moviecard movie={movie} key={movie.id} /> ))} </div> )}
       </div>
-      {movie.length === 0 && <div className="h_no_movie">No movies found</div>}
+      
+      {movie.length === 0 && <div className="h_no_movie"> No movies found </div>}
 
       <footer className="h_footer"></footer>
+   
     </>
+
   );
 }
 

@@ -16,15 +16,16 @@ function Home() {
         setmovie(storemovie);
         seterr(null);
       } catch (err) {
+        console.error(err)
         seterr("Failed to load movies...");
       } finally {
         setloading(false);
       }
     };
-
+    
     loadmovie();
   }, []);
-
+  
   const loadsearchmovie = async (e) => {
     e.preventDefault();
     if (!query.trim()) {
@@ -33,12 +34,13 @@ function Home() {
     }
     if (loading) return;
     setloading(true);
-
+    
     try {
       const storesearchmovie = await searchmovie(query);
       setmovie(storesearchmovie);
       seterr(null);
     } catch (err) {
+      console.error(err)
       seterr("failed to search...");
 
       // But old movies stay on screen.

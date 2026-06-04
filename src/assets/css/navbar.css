@@ -13,6 +13,7 @@
     z-index: 1;
 }
 
+/* When your React code compiles, <Link> is a component that turns into a standard <a> (anchor) tag in the final HTML, so used a tag to access it */
 .n_header a {
     text-decoration: none;
 }

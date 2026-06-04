@@ -68,6 +68,8 @@ function Home() {
           <div className="h_loading"> loading movies... </div>
         ) : (
           <div className="box">
+
+            {/* Never use  {} use () or it will print undefined */}
             {movie.map((movie) => (
               <Moviecard movie={movie} key={movie.id} />
             ))}

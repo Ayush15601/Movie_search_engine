@@ -134,20 +134,6 @@ Example:
 
 ---
 
-# Future Improvements
-
-- Debounced search
-- Infinite scrolling
-- Pagination
-- Movie details page
-- Trailer integration
-- Dark mode
-- User authentication
-- Watchlist feature
-- Skeleton loading animations
-
----
-
 # What I Learned
 
 - React component architecture

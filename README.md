@@ -122,8 +122,7 @@ Endpoints used:
 ---
 
 # Screenshots
-
-*<img width="1827" height="1052" alt="image" src="https://github.com/user-attachments/screenshots/home.png" />
+<img width="1906" height="915" alt="home" src="https://github.com/user-attachments/assets/296089da-3542-4e14-8a52-6fd00d845e0a" />
 *
 
 ```

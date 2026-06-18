@@ -123,13 +123,9 @@ Endpoints used:
 
 # Screenshots
 
-Add your screenshots here.
+*<img width="1827" height="1052" alt="image" src="https://github.com/user-attachments/screenshots/home.png" />
+*
 
-Example:
-
-```md
-![Home Page](./screenshots/home.png)
-![Favorites Page](./screenshots/favorites.png)
 ```
 
 ---

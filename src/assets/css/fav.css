@@ -1,8 +1,15 @@
+.f_fav {
+    color: rgb(138, 117, 163);
+    /* background-color: red; */
+    padding-top: 8rem;
+    font-size: 2rem;
+}
+
 .f_box2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 8rem;
+    padding-top: 4rem;
     margin-left: 1rem;
     column-gap: 4rem;
     row-gap: 4rem;

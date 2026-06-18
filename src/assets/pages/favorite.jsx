@@ -8,9 +8,16 @@ function Favourite() {
   if (fav.length > 0) {
     return (
       
-      <div className="f_box2">
-        {fav.map((movie) => ( <Moviecard movie={movie} key={movie.id} /> ))}
-      </div>
+      <>
+
+        <div className="f_fav"> <p> Favourites </p> </div>
+      
+        <div className="f_box2">
+          {fav.map((movie) => ( <Moviecard movie={movie} key={movie.id} /> ))}
+        </div>
+
+      </>
+
     );
 
   } else {

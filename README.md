@@ -100,6 +100,7 @@ Open `http://localhost:5173/` in your browser to view the application.
 
 ## 📸 Screenshots
 
+<<<<<<< HEAD
 ### Home Page (Trending Movies)
 Displays popular movies on load. Users can hover over any movie card to reveal the favorite (♥) button.
 ![Home Page](./screenshots/home.png)
@@ -125,6 +126,42 @@ Displays all saved movies. If no movies are favorited, a friendly placeholder ca
 ---
 
 ## 👤 Author
+=======
+Create a `.env` file in the root directory.
+
+```env
+VITE_TMDB_API_KEY=your_api_key_here
+```
+
+Get your API key from:
+
+:contentReference[oaicite:0]{index=0}
+
+---
+
+# API Used
+
+This project uses the TMDB API for fetching movie data.
+
+Endpoints used:
+
+```bash
+/movie/popular
+/search/movie
+```
+
+---
+
+# Screenshots
+<img width="1906" height="915" alt="home" src="https://github.com/user-attachments/assets/296089da-3542-4e14-8a52-6fd00d845e0a" />
+*
+
+```
+
+---
+
+# What I Learned
+>>>>>>> 62da03972c077bf011e9d2dab2c50d1186d3af83
 
 - **Ayush**
 

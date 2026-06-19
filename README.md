@@ -152,17 +152,6 @@ Endpoints used:
 
 ---
 
-# Screenshots
-<img width="1906" height="915" alt="home" src="https://github.com/user-attachments/assets/296089da-3542-4e14-8a52-6fd00d845e0a" />
-*
-
-```
-
----
-
-# What I Learned
->>>>>>> 62da03972c077bf011e9d2dab2c50d1186d3af83
-
 - **Ayush**
 
 ---

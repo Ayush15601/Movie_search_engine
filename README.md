@@ -125,7 +125,7 @@ Displays all saved movies. If no movies are favorited, a friendly placeholder ca
 
 ---
 
-## 👤 Author
+## ⚙️ Environment Setup
 =======
 Create a `.env` file in the root directory.
 
@@ -150,6 +150,12 @@ Endpoints used:
 /search/movie
 ```
 
+## 👤 Author
+
+* **Ayush**
+
+---
+
 ## 📄 License
 
-This project is open-source and created for learning and personal development purposes.
+This project is fully open source and distributed under the terms of the [MIT License](LICENSE).

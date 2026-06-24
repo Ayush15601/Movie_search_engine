@@ -23,6 +23,6 @@ export const searchmovie = async (query) => {
   
   catch (err) {
     console.error("Error in move searching -> ", err);
-    return;
+    return [];
   }
 };

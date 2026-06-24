@@ -11,10 +11,8 @@ function App() {
     <>
     
       <Movieprovider>
-    
-        <header className="a_header">
+     
           <Navbar />
-        </header>
 
         <div>
     

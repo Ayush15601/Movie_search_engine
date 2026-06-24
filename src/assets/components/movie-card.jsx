@@ -1,10 +1,10 @@
 import "../css/moviecard.css";
-import { usemoviecontext } from "../../context/context";
+import { useMovieContext } from "../../context/context";
 
 function Moviecard({ movie }) {
   const imgurl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
-  const { isfav, addfav, remfav } = usemoviecontext();
+  const { isfav, addfav, remfav } = useMovieContext();
 
   const favv = isfav(movie.id);
 

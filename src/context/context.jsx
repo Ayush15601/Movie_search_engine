@@ -2,15 +2,14 @@ import { useState, useEffect, useContext, createContext } from "react";
 
 const Moviecontext = createContext();
 
-export const usemoviecontext = () => useContext(Moviecontext);
+// eslint-disable-next-line react-refresh/only-export-components
+export const useMovieContext = () => useContext(Moviecontext);
 
 export const Movieprovider = ({ children }) => {
-  const [fav, setfav] = useState([]);
-
-  useEffect(() => {
-    const getfav = localStorage.getItem("fav");
-    if (getfav) setfav(JSON.parse(getfav));
-  }, []);
+  const [fav, setfav] = useState(() => {
+    const stored = localStorage.getItem("fav");
+    return stored ? JSON.parse(stored) : [];
+  });
 
   useEffect(() => {
     localStorage.setItem("fav", JSON.stringify(fav));

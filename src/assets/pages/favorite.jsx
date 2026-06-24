@@ -1,9 +1,9 @@
 import "../css/fav.css";
-import { usemoviecontext } from "../../context/context";
+import { useMovieContext } from "../../context/context";
 import Moviecard from "../components/movie-card";
 
 function Favourite() {
-  const { fav } = usemoviecontext();
+  const { fav } = useMovieContext();
 
   if (fav.length > 0) {
     return (

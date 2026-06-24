@@ -67,7 +67,7 @@ function Home() {
         {loading ? (<div className="h_loading"> loading movies... </div>) : (<div className="box"> {/* Never use  {} use () or it will print undefined */} {movie.map((movie) => (<Moviecard movie={movie} key={movie.id} /> ))} </div> )}
       </div>
       
-      {movie.length === 0 && <div className="h_no_movie"> No movies found </div>}
+      {!loading && !err && movie.length === 0 && <div className="h_no_movie"> No movies found </div>}
 
       <footer className="h_footer"></footer>
    

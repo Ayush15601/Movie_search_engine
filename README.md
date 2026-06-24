@@ -115,17 +115,7 @@ Displays all saved movies. If no movies are favorited, a friendly placeholder ca
 
 ---
 
-## 📈 Future Enhancements
-
-- **Debounced Search**: Reduce API calls by triggering search only after the user stops typing.
-- **Infinite Scroll / Pagination**: Load more movies dynamically as the user scrolls.
-- **Detailed View**: Create a dedicated details page for each movie with ratings, genres, cast, and trailers.
-- **Dark/Light Mode Toggle**: Allow users to toggle theme preferences.
-- **Skeleton Loaders**: Replace the basic "loading" text with modern animated skeleton shapes.
-
----
-
-## 👤 Author
+## ⚙️ Environment Setup
 =======
 Create a `.env` file in the root directory.
 
@@ -150,23 +140,12 @@ Endpoints used:
 /search/movie
 ```
 
----
+## 👤 Author
 
-# Screenshots
-<img width="1906" height="915" alt="home" src="https://github.com/user-attachments/assets/296089da-3542-4e14-8a52-6fd00d845e0a" />
-*
-
-```
-
----
-
-# What I Learned
->>>>>>> 62da03972c077bf011e9d2dab2c50d1186d3af83
-
-- **Ayush**
+* **Ayush**
 
 ---
 
 ## 📄 License
 
-This project is open-source and created for learning and personal development purposes.
+This project is fully open source and distributed under the terms of the [MIT License](LICENSE).

@@ -115,16 +115,6 @@ Displays all saved movies. If no movies are favorited, a friendly placeholder ca
 
 ---
 
-## 📈 Future Enhancements
-
-- **Debounced Search**: Reduce API calls by triggering search only after the user stops typing.
-- **Infinite Scroll / Pagination**: Load more movies dynamically as the user scrolls.
-- **Detailed View**: Create a dedicated details page for each movie with ratings, genres, cast, and trailers.
-- **Dark/Light Mode Toggle**: Allow users to toggle theme preferences.
-- **Skeleton Loaders**: Replace the basic "loading" text with modern animated skeleton shapes.
-
----
-
 ## ⚙️ Environment Setup
 =======
 Create a `.env` file in the root directory.
